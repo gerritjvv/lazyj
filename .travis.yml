@@ -1,5 +1,5 @@
 language: java
 
-script: mvn clean install
+script: ./build.sh test
 jdk:
   - openjdk11

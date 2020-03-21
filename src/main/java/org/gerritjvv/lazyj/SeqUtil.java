@@ -20,6 +20,9 @@ public class SeqUtil {
     /**
      * Create a sequence from the iterable.
      * Streams and closeable iterables are attached using onClose.
+     * @param it
+     * @param <R>
+     * @return
      */
     public static <R> Seq<R> seq(Iterable<? extends R> it) {
         if (it instanceof Seq)
