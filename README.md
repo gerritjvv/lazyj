@@ -11,7 +11,8 @@ without creating intermediate sequences.
 
 Example:  
 ```
-map -> map -> map -> filter -> filter becomes:  
+map -> map -> map -> filter -> filter 
+becomes:  
 MapSeq( do map1, map2,  map2) -> FilterSeq(  do filter1,  filter1 )... 
 ``` 
 
@@ -41,14 +42,14 @@ This is done by encapsulating each next call into a closure instance. Only calle
 Consecutive maps are merged into one sequence instance and then same is done for filters and take operations.  
 A filter operation can merge in map operations but not the other way around.
 
-*Close Handler:*
+**Close Handler:**
 
 Streams are different from Sequences in that Streams can only be used once and then closed and thrown away  
 Sequences are immutable and in general has no notion of being closed or open. We support the close handler   
 mechanism for Streams to allow bottom down IO operations, but when used sequences should be semantically used as<  
 Streams, i.e when closed not used again.  
 
-Null values:  
+**Null values:**  
 
 Null values cannot be stored in sequences, because null signals an end of sequence.  
 For null values use Optional.
