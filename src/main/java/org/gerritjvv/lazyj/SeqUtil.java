@@ -56,7 +56,7 @@ public class SeqUtil {
     /**
      * Return a sequence from the array
      */
-    public static <T> Seq<T> seq(T[] it) {
+    public static <T> Seq<T> seq(T... it) {
         return seq(it, 0);
     }
 

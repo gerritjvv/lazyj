@@ -123,7 +123,7 @@ public class LazySeqTests {
                 .take(10)
                 .drop(1)
                 .cons(1)
-                .concat(SeqUtil.seq(new Integer[]{4, 5}))
+                .concat(SeqUtil.seq(4, 5))
                 .take(10)
                 .distinct()
                 .unordered()

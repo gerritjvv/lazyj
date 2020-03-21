@@ -6,19 +6,11 @@ in cluster to cluster replication. Where data coming in has been modeled as infi
 This abstract model helped to simplify programming as a whole, even though the actual events were stored in several
 files and in multiple directories.
 
-What is cool in this library is that is would take multiple operations like merge, filter or take and group them together
-without creating intermediate sequences.
-
-Example:  
-```
-map -> map -> map -> filter -> filter 
-becomes:  
-MapSeq( do map1, map2,  map2) -> FilterSeq(  do filter1,  filter1 )... 
-``` 
-
 ## Usage
 
-Usage
+
+**Infinite Sequence**
+
  ```java
  private static Seq<Integer> lazyNumbers(int i){
      if (i > 0)
@@ -27,6 +19,33 @@ Usage
          return Functional.lazySeqEmpty();
  }
 ```
+
+**Operations**
+
+```java
+lazyNumbers(100)
+   .map(v -> v + 1)
+   .filter(v -> v == 2)
+   .take(10)
+   .drop(1)
+   .cons(1)
+   .concat(SeqUtil.seq(4, 5))
+   .take(10)
+   .distinct()
+   .unordered()
+   .sorted();
+```
+
+```java
+Seq<Integer> inputSeq = lazyNumbers(10);
+Seq<Pair<Integer, Long>> seq =
+   Functional.mapIndexed(
+     inputSeq,
+     (v, i) -> true,
+     (v, i) -> Pair.create(v, i),
+     0L);
+```
+
 
 ## More examples:
 
