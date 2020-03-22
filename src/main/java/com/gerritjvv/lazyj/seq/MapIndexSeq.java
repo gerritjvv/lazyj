@@ -1,9 +1,9 @@
-package org.gerritjvv.lazyj.seq;
+package com.gerritjvv.lazyj.seq;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import org.gerritjvv.lazyj.Seq;
+import com.gerritjvv.lazyj.Seq;
 
 /**
  * Map operation that includes an index.

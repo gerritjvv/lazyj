@@ -1,11 +1,11 @@
-package org.gerritjvv.lazyj;
+package com.gerritjvv.lazyj;
 
 import java.util.Iterator;
 
+import com.gerritjvv.lazyj.seq.LazySeq;
 import org.junit.Test;
 
-import org.gerritjvv.lazyj.seq.Cons;
-import org.gerritjvv.lazyj.seq.LazySeq;
+import com.gerritjvv.lazyj.seq.Cons;
 
 import static org.junit.Assert.assertEquals;
 

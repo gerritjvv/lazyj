@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj.seq;
+package com.gerritjvv.lazyj.seq;
 
 import java.util.function.ObjLongConsumer;
 

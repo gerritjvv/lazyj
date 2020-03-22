@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj;
+package com.gerritjvv.lazyj;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import org.gerritjvv.lazyj.seq.Cons;
-import org.gerritjvv.lazyj.seq.LazySeq;
+import com.gerritjvv.lazyj.seq.Cons;
+import com.gerritjvv.lazyj.seq.LazySeq;
 
 /**
  * Utility support functions common to all sequences.
@@ -37,6 +37,10 @@ public class SeqUtil {
 
     /**
      * Create a stream from the iterator and with the close handler attached.
+     * @param it the iterator to create the sequence from
+     * @param closeHandler the handler to call on close
+     * @param <R> the type in the sequence
+     * @return the sequence
      */
     public static <R> Seq<R> seq(Iterator<? extends R> it, Runnable closeHandler) {
         return LazySeq.create(() -> {
@@ -55,6 +59,9 @@ public class SeqUtil {
 
     /**
      * Return a sequence from the array
+     * @param it the array to create a sequence from
+     * @param <T> the type in the sequence
+     * @return the sequence
      */
     public static <T> Seq<T> seq(T... it) {
         return seq(it, 0);
@@ -62,6 +69,10 @@ public class SeqUtil {
 
     /**
      * Return a sequence from the array starting at the array index i.
+     * @param it the array
+     * @param i the array index
+     * @param <T> the type in the sequence
+     * @return the new sequence
      */
     public static <T> Seq<T> seq(T[] it, int i) {
         if (it == null)
@@ -75,6 +86,8 @@ public class SeqUtil {
 
     /**
      * Return an empty sequence
+     * @param <R> the type of the sequence
+     * @return the new sequence
      */
     public static <R> Seq<R> empty() {
         return EMPTY_SEQ;
@@ -82,6 +95,9 @@ public class SeqUtil {
 
     /**
      * Converts a Stream into a lazy seq
+     * @param s the stream to convert
+     * @param <R> the type in the stream
+     * @return the new sequence
      */
     public static <R> Seq<R> seq(Stream<? extends R> s) {
         if (s instanceof Seq)
@@ -93,6 +109,9 @@ public class SeqUtil {
 
     /**
      * Converts a lazy seq into a java Stream
+     * @param seq the sequence
+     * @param <T> the type in the sequence
+     * @return the stream of the sequence
      */
     public static <T> Stream<T> stream(Seq<T> seq) {
         return seq;
@@ -100,6 +119,9 @@ public class SeqUtil {
 
     /**
      * Return an iterator for a Seq.
+     * @param seq the sequence
+     * @param <T> the type in the sequence
+     * @return the new iterator
      */
     public static <T> Iterator<T> iterator(Seq<T> seq) {
         return seq.iterator();
@@ -111,6 +133,12 @@ public class SeqUtil {
 
     /**
      * Flatten out a tree structure as a lazy sequence
+     * @param isBranch true if the root is a branch and has children
+     * @param children return the  children of the root e.g children.apply(root)
+     * @param root the  first element in the truee
+     * @param closeHandler to call when close is called on the sequence
+     * @param <T>  the type in the  seq
+     * @return new seq
      */
     public static <T> Seq<T> treeSeq(Predicate<T> isBranch, Function<T, Seq<T>> children, T root, Runnable closeHandler) {
         if (root == null)

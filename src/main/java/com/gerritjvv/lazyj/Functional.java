@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj;
+package com.gerritjvv.lazyj;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -20,13 +20,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import com.gerritjvv.lazyj.seq.ObjLongFunction;
 import com.google.common.base.Throwables;
 import com.google.common.cache.Cache;
 
-import org.gerritjvv.lazyj.seq.Cons;
-import org.gerritjvv.lazyj.seq.LazySeq;
-import org.gerritjvv.lazyj.seq.MapIndexSeq;
-import org.gerritjvv.lazyj.seq.ObjLongFunction;
+import com.gerritjvv.lazyj.seq.Cons;
+import com.gerritjvv.lazyj.seq.LazySeq;
+import com.gerritjvv.lazyj.seq.MapIndexSeq;
 
 /**
  * Implement functional features that java 1.8 doesn't

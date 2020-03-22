@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj.seq;
+package com.gerritjvv.lazyj.seq;
 
 import java.util.Comparator;
 import java.util.List;
@@ -26,7 +26,7 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
-import org.gerritjvv.lazyj.Seq;
+import com.gerritjvv.lazyj.Seq;
 
 /**
  * Extends {@link AbstractSeq} with implementations for Stream.<br/>

@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj;
+package com.gerritjvv.lazyj;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -14,9 +14,6 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 import javax.annotation.Nullable;
-
-import com.google.common.base.Functions;
-import com.google.common.base.Throwables;
 
 /**
  * Usage:<br>

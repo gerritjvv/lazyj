@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj.seq;
+package com.gerritjvv.lazyj.seq;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import org.gerritjvv.lazyj.Seq;
+import com.gerritjvv.lazyj.Seq;
 
 /**
  *
@@ -321,6 +321,9 @@ public abstract class AbstractSeq<T> implements Seq<T> {
 
     /**
      * Implements the Stream onClose exception logic
+     * @param a Runnable
+     * @param b Runnable
+     * @return a new runnable that will call a and b
      */
     protected Runnable mergeOnClose(Runnable a, Runnable b) {
         if (a == null) {

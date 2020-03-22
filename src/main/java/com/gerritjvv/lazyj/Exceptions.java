@@ -1,4 +1,4 @@
-package org.gerritjvv.lazyj;
+package com.gerritjvv.lazyj;
 
 public class Exceptions {
     public static Throwable unwrap(Throwable t) {
