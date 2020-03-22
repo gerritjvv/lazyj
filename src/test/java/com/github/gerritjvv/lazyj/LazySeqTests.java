@@ -1,4 +1,4 @@
-package com.gerritjvv.lazyj;
+package com.github.gerritjvv.lazyj;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.junit.Test;
-import com.gerritjvv.lazyj.seq.Cons;
+import com.github.gerritjvv.lazyj.seq.Cons;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

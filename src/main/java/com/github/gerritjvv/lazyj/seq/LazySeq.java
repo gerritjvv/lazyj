@@ -1,10 +1,10 @@
-package com.gerritjvv.lazyj.seq;
+package com.github.gerritjvv.lazyj.seq;
 
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import com.gerritjvv.lazyj.Seq;
+import com.github.gerritjvv.lazyj.Seq;
 
 /**
  *

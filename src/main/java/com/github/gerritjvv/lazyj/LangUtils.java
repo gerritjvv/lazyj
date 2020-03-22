@@ -1,4 +1,4 @@
-package com.gerritjvv.lazyj;
+package com.github.gerritjvv.lazyj;
 
 import java.util.List;
 import java.util.Set;

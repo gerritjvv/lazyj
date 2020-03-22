@@ -1,4 +1,4 @@
-package com.gerritjvv.lazyj.seq;
+package com.github.gerritjvv.lazyj.seq;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import com.gerritjvv.lazyj.Seq;
+import com.github.gerritjvv.lazyj.Seq;
 
 /**
  *

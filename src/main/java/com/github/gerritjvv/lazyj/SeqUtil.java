@@ -1,4 +1,4 @@
-package com.gerritjvv.lazyj;
+package com.github.gerritjvv.lazyj;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import com.gerritjvv.lazyj.seq.Cons;
-import com.gerritjvv.lazyj.seq.LazySeq;
+import com.github.gerritjvv.lazyj.seq.Cons;
+import com.github.gerritjvv.lazyj.seq.LazySeq;
 
 /**
  * Utility support functions common to all sequences.
