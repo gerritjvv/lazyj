@@ -72,3 +72,13 @@ Streams, i.e when closed not used again.
 
 Null values cannot be stored in sequences, because null signals an end of sequence.  
 For null values use Optional.
+
+
+# Developer details
+
+## Maven repo
+
+Docs: https://www.rainerhahnekamp.com/en/publishing-a-java-library-to-maven-central/
+
+See: https://issues.sonatype.org/browse/OSSRH-56033
+
